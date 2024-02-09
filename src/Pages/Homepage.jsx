@@ -114,6 +114,9 @@ const Homepage = () => {
                     showAll ? userList.map(user => <UserCard key={user.id} user={user}></UserCard>) : userList.slice(0, 15).map(user => <UserCard key={user.id} user={user}></UserCard>)
                 }
             </div>
+            {
+                userList.length < 1 && loading === false && <p className='font-semibold text-xl text-center text-red-500 my-5'>No Data Found!</p>
+            }
             <div className='flex items-center justify-center my-6'>
                 <button onClick={() => setShowAll(!showAll)} className='btn btn-primary btn-outline'>{showAll ? 'Show Less' : 'Show All'}</button>
             </div>
