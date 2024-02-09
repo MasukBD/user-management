@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  @apply font-bold text-lg text-pink-500 flex gap-1 items-center
+}
+
+.default {
+  @apply text-white font-bold hover:bg-pink-400 flex gap-1 items-center
+}
