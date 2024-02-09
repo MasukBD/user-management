@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .active {
-  @apply font-bold text-lg text-pink-500 flex gap-1 items-center
+  @apply font-bold text-lg text-pink-500 flex gap-1 items-center p-1
 }
 
 .default {
-  @apply text-white font-bold hover:bg-pink-400 flex gap-1 items-center
+  @apply text-white font-bold hover:bg-pink-400 flex gap-1 items-center p-1 rounded-sm
 }

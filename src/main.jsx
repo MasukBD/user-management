@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from './Layout/Main';
 import ErrorPage from './SharedComponent/ErrorPage';
 import Homepage from './Pages/Homepage';
+import UserPage from './SharedComponent/UserPage';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Homepage></Homepage>
+      },
+      {
+        path: "/user/:id",
+        element: <UserPage></UserPage>,
+        loader: ({ params }) => fetch(`https://dummyjson.com/users/${params.id}`)
       }
     ]
   },
